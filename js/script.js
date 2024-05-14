@@ -11,7 +11,7 @@ createApp({
                 { compito: 'Lavarsi i denti', done: false },
             ],
             exercise: '',
-            
+            esercizioFatto: 0,
         }
     },
     methods: {
@@ -23,15 +23,17 @@ createApp({
         deleteEx(index) {
             this.todoList.splice(index, 1);
             console.log(index, this.todoList);
-            this.todoList[index+1].done = this.todoList[index+2].done
         },
         checkYes(index) {
             if (this.todoList[index].done == false) {
                 this.todoList[index].done = true;
+                this.esercizioFatto++;
             } else {
                 this.todoList[index].done = false
+                this.esercizioFatto--;
             }
-        }
+        },
+        
     },
     mount() {
 
