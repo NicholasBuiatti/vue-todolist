@@ -15,7 +15,7 @@
     <h1 class="text-danger text-center p-4">Routine giornagliera</h1>
     <div class="container">
         <ul class="list-group">
-            <li v-for="element, i in todoList" class="list-group-item d-flex justify-content-between"> {{ element.compito }} 
+            <li @click="checkYes(i)" v-for="element, i in todoList" :class="(todoList[i].done == false) ? 'bg-warning' : 'bg-primary'" class="list-group-item d-flex justify-content-between"> {{ element.compito }} 
                 <button @click="deleteEx(i)" type="button" class="btn btn-outline-danger">x</button>
             </li>
         </ul>
@@ -30,4 +30,4 @@
 <script src="./js/script.js"></script>
 </body>
 </html>
-<!-- <i class="fa-solid fa-xmark"></i> -->
+<!-- <i class="fa-solid fa-xmark"></i>:class="(todoList.done == true) ? 'bg-primary' : 'bg-warning'" -->
