@@ -15,7 +15,9 @@
     <h1 class="text-danger text-center p-4">Esercizi giornalieri</h1>
     <div class="container">
         <ul class="list-group">
-            <li v-for="element in todoList" class="list-group-item"> {{ element }} </li>
+            <li v-for="element, i in todoList" class="list-group-item d-flex justify-content-between"> {{ element }} 
+                <button @click="deleteEx(i)" type="button" class="btn btn-outline-danger">x</button>
+            </li>
         </ul>
         <div class="input-group mb-3 mt-3 w-50">
             <input v-model="exercise" type="text" class="form-control" placeholder="aggiungi esercizio" aria-label="Recipient's username" aria-describedby="button-addon2">
@@ -28,3 +30,4 @@
 <script src="./js/script.js"></script>
 </body>
 </html>
+<!-- <i class="fa-solid fa-xmark"></i> -->

@@ -17,6 +17,11 @@ createApp({
     methods: {
         pushIn() {
             this.todoList.push(this.exercise);
+            this.exercise = '';
+        },
+        deleteEx(index) {
+            this.todoList.splice(index, 1);
+            console.log(index, this.todoList);
         },
     },
     mount() {
