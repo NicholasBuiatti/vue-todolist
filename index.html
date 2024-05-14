@@ -11,7 +11,15 @@
 <body>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     
-<div id="app">{{ message }}</div>
+<div class="bg-dark vh-100" id="app">
+    <h1 class="text-danger text-center p-4">Esercizi giornalieri</h1>
+    <div class="container">
+        <ul class="list-group">
+            <li v-for="element in todoList" class="list-group-item"> {{ element }} </li>
+            
+          </ul>
+    </div>
+</div>
 
 <!-- VUE.JS -->
 <script src="./js/script.js"></script>

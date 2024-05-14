@@ -3,7 +3,14 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            message: 'Hello Vue!'
+            todoList : [
+                'panca piana',
+                'croci ai cavi',
+                'military press',
+                'pike pushUp',
+                'rematore',
+                'trazioni lente',
+            ],
         }
     }
 }).mount('#app')
