@@ -16,8 +16,11 @@
     <div class="container">
         <ul class="list-group">
             <li v-for="element in todoList" class="list-group-item"> {{ element }} </li>
-            
-          </ul>
+        </ul>
+        <div class="input-group mb-3 mt-3 w-50">
+            <input v-model="exercise" type="text" class="form-control" placeholder="aggiungi esercizio" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button @click="pushIn" class="btn btn-outline-dark bg-danger" type="button" id="button-addon2">Aggiungi</button>
+        </div>
     </div>
 </div>
 

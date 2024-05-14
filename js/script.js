@@ -11,6 +11,15 @@ createApp({
                 'rematore',
                 'trazioni lente',
             ],
+            exercise : '',
         }
+    },
+    methods: {
+        pushIn() {
+            this.todoList.push(this.exercise);
+        },
+    },
+    mount() {
+
     }
 }).mount('#app')
